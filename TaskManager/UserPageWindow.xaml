@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskManager"
         mc:Ignorable="d"
-        Title="UserPageWindow" Height="450" Width="800">
-    <Grid>
-        
+        WindowStartupLocation="CenterScreen"
+        Title="UserPageWindow" Height="600" Width="1000">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard TargetProperty ="Width" TargetName ="JoButton">
+                        <DoubleAnimation From="0" To="678"
+                                         RepeatBehavior="1x"
+                                         Duration="0:0:2"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid Background="#ffdadada">
+        <Border MinWidth="400" Margin ="15,0,15,0" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="900" CornerRadius="10" Height="507">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0" />
+            </Border.Effect>
+            <Button x:Name="JoButton" Content="JOPA" Margin="0,389,0,26" HorizontalAlignment="Center" Width="678" Click="Button_Click"/>
+
+
+        </Border>
     </Grid>
 </Window>

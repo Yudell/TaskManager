@@ -85,7 +85,7 @@ namespace TaskManager
                 MessageBox.Show("Вы успешно зарегестрировались!");
                 UserPageWindow userPageWindow = new UserPageWindow();
                 userPageWindow.Show();
-                Hide();
+                Close();
             }
         }
 
@@ -93,7 +93,7 @@ namespace TaskManager
         {
             AuthWindow authWindow = new AuthWindow();
             authWindow.Show();
-            Hide();
+            Close();
         }
     }
 }
