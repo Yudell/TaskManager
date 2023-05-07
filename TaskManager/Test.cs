@@ -42,7 +42,7 @@ namespace TaskManager
             stack.Children.Add(Column());
             stack.Children.Add(Column());
             stack.Children.Add(Column());
-            stack.Children.Add(Jopumn());
+            stack.Children.Add(NewStackPanel());
             return stack;
         }
         private static Border Column()
@@ -82,9 +82,9 @@ namespace TaskManager
             bord.Child = myStack;
             return bord;
         }
-        private static Border Jopumn()
+        private static Border NewStackPanel()
         {
-            Border Man = new Border
+            Border Bordero = new Border
             {
                 Margin = new Thickness(10),
                 Background = new SolidColorBrush(Colors.White),
@@ -94,9 +94,9 @@ namespace TaskManager
                 CornerRadius = new CornerRadius(5),
                 Effect = new DropShadowEffect { BlurRadius = 30, Color = Colors.Black, ShadowDepth = 0 }
             };
-            StackPanel Bruh = new StackPanel();
+            StackPanel NewStack = new StackPanel();
 
-            Button AddJopumn = new Button
+            Button AddStack = new Button
             {
                 Background = new SolidColorBrush(Colors.Blue),
                 Margin = new Thickness(10),
@@ -104,11 +104,11 @@ namespace TaskManager
                 Height = 40,
                 Content = "+"
             };
-            AddJopumn.Click += new RoutedEventHandler(AddJopumn_Click);
+            AddStack.Click += new RoutedEventHandler(AddJopumn_Click);
 
-            Bruh.Children.Add(AddJopumn);
-            Man.Child = Bruh;
-            return Man;
+            NewStack.Children.Add(AddStack);
+            Bordero.Child = NewStack;
+            return Bordero;
 
         }
         private static void AddJopumn_Click(object sender, RoutedEventArgs e)
